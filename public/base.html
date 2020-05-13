@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>xml-proxy</title>
+
+</head>
+<body>
+    <h1>xml-proxy</h1>
+
+    <p>The script is deployed at <a href="https://xml-proxy.emilfolino.se">https://xml-proxy.emilfolino.se</a>.</p>
+
+    <pre><code>var url = encodeURIComponent("https://emilfolino.se/sitemap.xml");
+
+fetch("https://xml-proxy.emilfolino.se/" + url)
+.then(function (response) {
+    return response.json();
+}).then(function(result) {
+    console.log("With proxy: ", result);
+});</code></pre>
+
+</body>
+</html>
